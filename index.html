@@ -1,53 +1,23 @@
-<!DOCTYPE HTML>
+---
+layout: default
+title: Retreats - connecting the world with retreats and wellness holidays
+---
 
-<html>
-  <head>
-
-      <title>Retreats - connecting the world with retreats and wellness holidays</title>
-
-
-      <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
-
-      <link href="style.css" rel="stylesheet">
-
-  </head>
-
-  <body>
+  <!-- Home Page Banner -->
     <div class="banner">
       <div class=darkoverlay>
-        <header class="grid-middle">
-          <nav class="col-3 company-name">
-            <!-- <div class="company-icon"> # </div> -->
-            <a href="index.html"> Retreats </a>
-          </nav>
 
-          <nav class="col-6">
-            <a href="about.html"> About </a>
-            <a href="destinations.html"> Destinations </a>
-            <a href="offers.html"> Offers </a>
-            <a href="other.html"> Other </a>
-          </nav>
+        {% include header.html %}
 
-          <nav class="col-3">
-            <a href="sign-up.html"> Sign Up </a>
-            <a href="log-in.html"> Log In </a>
-          </nav>
-
-        </header>
-
-    <!-- Home Page Banner -->
         <section class="grid-middle ">
           <div class="col">
-            <h1> Relax, Restore, Rejuvenate </h1>
-            <h2> Connecting the world with retreats and wellness holidays </h2>
+            <h1 class="light-text"> Relax, Restore, Rejuvenate </h1>
+            <h2 class="light-text"> Connecting the world with retreats and wellness holidays </h2>
           </div>
         </section>
 
-      </div>
-    </div>
+      </div> <!-- close overlay -->
+    </div> <!-- close banner -->
 
 <!-- Search Bar -->
     <section class="search-section">
@@ -87,69 +57,32 @@
     </section>
 
 <!-- Explore -->
-    <section class="explore">
-      <h2> Explore </h2>
-    </section>
 
-<!-- Footer -->
-    <footer>
-      <div class="grid">
-        <nav class="col-2 nav-list">
-          <h4> Company </h4>
-          <a href="about-us.html"> About Us </a>
-          <a href="careers.html"> Careers </a>
-          <a href="press.html"> Press </a>
-        </nav>
+    <section class="explore-types">
+      <h2> Popular holiday's and retreats </h2>
+      <div class="grid-center">
+        <a class="col-3 padded-1">
+        <div class="bg-yoga">
+          <h3 class="button"> Yoga </h3>
+        </div>
+        </a>
 
-        <nav class="col-2 nav-list">
-          <h4> Support </h4>
-          <a href="contact.html"> Contact </a>
-          <a href="faq.html"> FAQ </a>
-          <a href="help.html"> Help </a>
-        </nav>
+        <a class="col-3 padded-1">
+        <div class="bg-weightloss">
+          <h3 class="button"> Weightloss </h3>
+        </div>
+        </a>
 
-        <nav class="col-2 nav-list">
-          <h4> Partners </h4>
-          <a href="workwithus.html"> Work with us </a>
-        </nav>
+        <a class="col-3 padded-1">
+        <div class="bg-adventure">
+          <h3 class="button"> Adventure </h3>
+        </div>
+        </a>
 
-        <nav class="col-6 nav-list contact-us padded-left">
-          <h4> Contact Us </h4>
-          <a href="..."> <i class="fa fa-map-marker"></i>
-            1 Martin Place Sydney NSW 2000 Australia
-          </a>
-          <a href="..."> <i class="fa fa-envelope-o"></i>
-            help@retreatit.com
-          </a>
-          <a href="..."> <i class="fa fa-phone"></i>
-            +61 02 9982 8921
-          </a>
-        </nav>
+        <a class="col-3 padded-1">
+        <div class="bg-rehab">
+          <h3 class="button"> Rehabilitation </h3>
+        </div>
+        </a>
 
-        <nav class="col-12 right footer-social">
-          <a href="http//twitter.com">
-            <i class="fa fa-twitter-square"></i>
-          </a>
-          <a href="http//facebook.com">
-              <i class="fa fa-facebook-official"></i>
-          </a>
-          <a href="http//instagram.com">
-            <i class="fa fa-instagram"></i>
-           </a>
-          <a href="http//pinterest.com">
-            <i class="fa fa-pinterest-square"></i>
-          </a>
-        </nav>
-
-        <nav class="col-12 right">
-          <a href="termsofuse.html" class=legal> Terms of use </a>
-          <a href="privacypolicy.html" class=legal> Privacy Policy </a>
-          <a href="accessability.html" class=legal> Accessability </a>
-        </nav>
-
-      </div>
-
-    </footer>
-
-
-  </body>
+      </section>

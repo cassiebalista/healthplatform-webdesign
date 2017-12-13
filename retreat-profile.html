@@ -1,21 +1,10 @@
-<!DOCTYPE HTML>
 
-<html>
-  <head>
+---
+layout: default
+title: Retreats - Profile
+---
 
-      <title>retreat-profile</title>
-
-
-      <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-
-
-      <link href="style.css" rel="stylesheet">
-
-  </head>
-
-  <body>
+{{% include header.html %}}
 
 <!-- - - - - - - - - - Header - - - - - - - - -  -->
 
@@ -43,9 +32,8 @@
         <section class="sub-header">
           <nav>
             <a href="#summary"> Summary </a>
-            <a href="#"> Book </a>
-            <a href="#"> Itinerary </a>
-            <a href="#"> Inclusions </a>
+            <a href="#itinerary"> Itinerary </a>
+            <a href="#inclusions"> Inclusions </a>
             <a href="#"> Packages </a>
             <a href="#"> Location </a>
             <a href="#"> Instructors </a>
@@ -54,8 +42,6 @@
           </nav>
         </section>
 
-        <section  id="summary"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </section>
 
 
 <!-- - - - - - - - -  Profile Banner Photo - - - - - - - - - - - - -->
@@ -68,18 +54,51 @@
 
   <!-- Summary -->
     <div class="profile-summary"> Summary
-        <input type="Submit" value="Search">
+      <section  id="summary"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
+      <input type="Submit" value="Book Now">
     </div>
 
   <!-- Itinerary-->
-    <div class="itin-profile"> Itinerary
+    <div class="itin-profile">
+      <div class="grid-middle">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Itinerary </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+      <section  id="itinerary"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
     </div>
 
   <!-- Inclusions-->
-    <div class="inclu-profile"> Inclusions
+    <div class="inclu-profile">
+      <div class="grid-middle">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Inclusions </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+      <section  id="inclusions">
+        <ul class="inclusions-list">
+          <li> Lorem ipsum dolor sit amet </li>
+          <li> consectetur adipisicing elit, sed do eiusmod tempor </li>
+          <li> incididunt ut labore et dolore magna aliqua. </li>
+          <li> Ut enim ad minim veniam </li>
+          <li> quis nostrud exercitation ullamco laboris nisi </li>
+          <li> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </li>
+          <li> in voluptate velit </li>
+          <li> esse cillum dolore eu fugiat nulla pariatur. </li>
+          <li> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+        </ul>
+      </section>
     </div>
 
   <!-- Packages-->
+      <div class="grid-middle">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Packages </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+
     <section class="grid-middle packages-profile">
       <div class="col-3"> Package 1
       </div>
@@ -91,20 +110,63 @@
 
   <!-- Location -->
     <section class="location-profile">
-      <div> google map plug in </div>
-      <div> location description </div>
+      <div class="grid-middle">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Location </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.498263790096!2d115.23325095010408!3d-8.450828993893392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd223aaaf09c597%3A0xd9697a3af62777ad!2sCOMO+Shambhala+Estate%2C+Bali!5e0!3m2!1sen!2sid!4v1513132150159" width="1000" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div>
+        <ul>
+          <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
+          <li> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </li>
+        </ul>
+      </div>
     </section>
 
-  <!-- Teachers -->
-      <div class="teachers-profile"> teachers/instructors/guest overview
+  <!-- Professionals Section -->
+      <div class="grid-middle profession-profile">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Professionals </h2> </div>
+        <div class="col-4"> <hr> </div>
       </div>
 
+      <div class="grid-middle">
+        <div class="col-4"> Background </div>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <div class="col-4">
+          <h4> Name </h4>
+          <p> John Smith </p>
+          <h4> Specialisation </h4>
+          <p> Yoga Instructor </p>
+          <h4> Learn More </p>
+          <a href="http://www.johnsmith.com"> Learn more about John </a>
+        </div>
+        <div class="col-4"> image</div>
+      </div>
+
+
   <!-- Exclusions -->
-      <div class="exclu-profile"> exclusions
+      <div class="grid-middle exclu-profile">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> Exclusions </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+
+      <div> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
 
   <!-- FAQ -->
-      <div class="faq-profile"> FAQ
+      <div class=" grid-middle faq-profile">
+        <div class="col-4"> <hr> </div>
+        <div class="col-4"> <h2> FAQ </h2> </div>
+        <div class="col-4"> <hr> </div>
+      </div>
+
+      <div> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
 
   <!-- Payment info -->
