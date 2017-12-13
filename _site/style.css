@@ -23,7 +23,7 @@ body {
   font-family: 'Quattrocento Sans', sans-serif;
 }
 
-footer, section {
+footer {
   padding: 5%;
 }
 
@@ -42,9 +42,20 @@ a {
 
 .light-text{
   color: white
-  
+
 }
 
+h2 span {
+  padding: 10px;
+  background-color: white;
+}
+
+hr.bump-up {
+    width: 50%;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: 3rem;
+}
 /*---------modular---------------*/
 
 .right {text-align: right;}
@@ -88,8 +99,12 @@ header{
   color:white;
 }
 
-header a {
-    padding: 5%;
+header {
+  padding: 3%;
+}
+
+.sub-header {
+  padding: 3%;
 }
 
 .banner {
@@ -171,20 +186,37 @@ h1{
 }
 
 .bg-bali{
-  background-image: url(images/Bali-Spa-Retreats1.jpg);
+  background-image: url('images/Bali-Spa-Retreats1.jpg');
 }
 
 .bg-aus{
-  background-image: url(images/bondiice.jpg);
+  background-image: url('images/bondiice.jpg');
 }
 
 .bg-nz{
-  background-image: url(images/roypeaknz.jpg);
+  background-image: url('images/roypeaknz.jpg');
 }
 
 .bg-japan{
-  background-image: url(images/templejapan.jpg);
+  background-image: url('images/templejapan.jpg');
 }
+
+.bg-yoga{
+  background-image: url('images/templejapan.jpg');
+}
+
+.bg-adventure{
+  background-image: url('images/templejapan.jpg');
+}
+
+.bg-weightloss{
+  background-image: url('images/templejapan.jpg');
+}
+
+.bg-rehab{
+  background-image: url('images/templejapan.jpg');
+}
+
 
 
 /* Featured Destinations */

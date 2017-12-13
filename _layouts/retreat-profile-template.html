@@ -14,7 +14,7 @@ header-class: solo-header
             <a href="#summary"> Summary </a>
             <a href="#itinerary"> Itinerary </a>
             <a href="#inclusions"> Inclusions </a>
-            <a href="#packages"> Packages </a>
+            <a href="#pricing"> Pricing </a>
             <a href="#location"> Location </a>
             <a href="#professionals"> Professionals </a>
             <a href="#exclusions"> Exclusions </a>
@@ -25,82 +25,78 @@ header-class: solo-header
 
 <!-- - - - - - - - -  Profile Banner Photo - - - - - - - - - - - - -->
       <section class="grid-middle bg-bali" style="background-image:url('{{page.background-image}}')">
-        <div>
-          <input type="Submit" value="View Photos">
-        </div>
-        <div>
-          <input type="Submit" value="Save">
-        </div>
-        <div>
-          <input type="Submit" value="Share">
-        </div>
+
+          <a href="#" class="button"> View Photos </a>
+
+          <a href="#" class="button"> Save </a>
+
+          <a href="#" tclass"button"> Share </a>
+
       </section>
 
 <!-- - - - - - - - - - - - - - - Body/Conent  - - - - - - - - - - - - - - - -->
-    <div class="retreat-name-logo"> {{page.title}}
-    </div>
 
-  <!-- Summary -->
-    <div id="summary" class="profile-summary"> Summary
-      <section  > {{page.summary}}
-      </section>
-      <input type="Submit" value="Book Now">
-    </div>
 
-  <!-- Itinerary-->
-    <div id="itinerary" class="itin-profile">
-      <div class="grid-middle">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Itinerary </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
-      <section> {{page.itinerary}}
-      </section>
-    </div>
+    <!-- Summary -->
+    <section id="summary" class="profile-summary">
+
+      <h1 class="retreat-name-logo"> {{page.title}} </h1>
+
+       <p>{{page.summary}}</p>
+
+      <a href="#" class="button"> BOOK NOW </a>
+
+    </section>
+
+    <!-- Itinerary-->
+    <section id="itinerary" class="itin-profile">
+
+        <h2> <span>Itinerary</span></h2>
+        <hr class="bump-up">
+
+      <p> {{page.itinerary}} </p>
+
+    </section>
 
   <!-- Inclusions-->
-    <div id="inclusions" class="inclu-profile">
-      <div class="grid-middle">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Inclusions </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
-      <section>
+    <section id="inclusions" class="inclu-profile">
+
+      <h2> <span>Inclusions</span></h2>
+      <hr class="bump-up">
+
         <ul class="inclusions-list">
           {% for inclusion-item in page.inclusion-list %}
           <li> {{inclusion-item.li}} </li>
           {% endfor %}
-
         </ul>
-      </section>
-    </div>
 
-  <!-- Packages-->
-      <div id="packages" class="grid-middle">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Packages </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
+    </section>
 
-    <section class="grid-middle packages-profile">
-      {% for package in page.package %}
-      <div class="col">
-        <h3>{{package.name}}</h3>
-        <p>{{package.discription}}</p>
-        <p>${{package.price}}</p>
-      </div>
+  <!-- Pricing -->
+    <section id="pricing">
+
+      <h2> <span>Pricing</span></h2>
+      <hr class="bump-up">
+
+      <div class="grid-middle pricing-profile">
+      {% for item in page.pricing %}
+        <div class="col">
+          <h3>{{item.name}}</h3>
+          <p>{{item.description}}</p>
+          <p>${{item.price}}</p>
+        </div>
       {% endfor %}
+      </div>
     </section>
 
   <!-- Location -->
+
     <section id="location" class="location-profile">
       <div class="grid-middle">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Location </h2> </div>
-        <div class="col-4"> <hr> </div>
+        <h2> <span>Location</span></h2>
+        <hr class="bump-up">
       </div>
-      <div>{{page.map}}
-      </div>
+      <div>{{page.map}}</div>
 
       <div>
         <ul class="location-discription">
@@ -112,116 +108,48 @@ header-class: solo-header
     </section>
 
   <!-- Professionals Section -->
-      <div id="location" class="grid-middle profession-profile">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Professionals </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
+    <section id="professionals" class="profession-profile">
+        <h2> <span>Professionals</span></h2>
+        <hr class="bump-up">
 
-      <div class="grid-middle">
-        <div class="col-4"> Background </div>
-          <p> {{page.background}} </p>
-        <div class="col-4">
-          <h4> Name </h4>
-          <p> {{page.name-first}} {{page.name-last}} </p>
-          <h4> Specialisation </h4>
-          <p> {{page.special}} </p>
-          <h4> Learn More </p>
-          <a href="{{page.back-url}}"> Learn more about {{page.name-first}} </a>
+        <div class="grid-middle">
+          <div class="col-4"> Background </div>
+            <p> {{page.background}} </p>
+            <div class="col-4">
+              <h4> Name </h4>
+              <p> {{page.name-first}} {{page.name-last}} </p>
+              <h4> Specialisation </h4>
+              <p> {{page.special}} </p>
+              <h4> Learn More </p>
+                <a href="{{page.back-url}}"> Learn more about {{page.name-first}} </a>
+              </div>
+              <div class="col-4" style="background-image:url('{{back_image}}')"></div>
         </div>
-        <div class="col-4" style="background-image:url('{{back_image}}')"></div>
-      </div>
+      </section>
 
 
   <!-- Exclusions -->
-      <div id="exclusions" class="grid-middle exclu-profile">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> Exclusions </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
+      <section id="exclusions" class="exclu-profile">
+        <h2> <span>Exclusions</span></h2>
+        <hr class="bump-up">
 
-      <div> {{page.exclusions}}.
-      </div>
+       <p>{{page.exclusions}}</p>
+     </section>
 
   <!-- FAQ -->
-      <div id="faq" class=" grid-middle faq-profile">
-        <div class="col-4"> <hr> </div>
-        <div class="col-4"> <h2> FAQ </h2> </div>
-        <div class="col-4"> <hr> </div>
-      </div>
+      <Section id="faq" class="faq-profile">
+        <h2> <span>FAQs</span></h2>
+        <hr class="bump-up">
 
-      <div> {{page.faq}}
-      </div>
+        <p> {{page.faq}}</p>
+      </section>
 
   <!-- Payment info -->
-      <div class="payment-info">
+
+      <section class="payment-info">
         <h2> Payment info </h2>
           <p>  By reserving your space through placing your deposit with us, you are agreeing to the stated policies in our Agreement.</p>
           <p> Please note: If cancellation takes place more than 60 days prior to your departure date any payments made will be refunded minus your deposit. If cancellation takes place between 30-60 days prior to your departure, 50% of the trip price will be forfeited. If cancellation takes place less than 30 days prior to your departure date, 100% of the trip price will be forfeited.</p>
-          <p> RETREATS reserves the right to make any changes deemed necessary by our team, trip leaders, teachers or partners. In the rare case of a cancellation on the part of YOGASCAPES (due to political unrest, dangerous weather, or low sign-ups)  we will offer a transfer to another trip or a full refund of your funds. We require all participants to purchase travel insurance and highly encourage them to purchase “cancel for any reason” to protect them against the rare chance of cancellation. </p>
+          <p> RETREATS reserves the right to make any changes deemed necessary by our team, trip leaders, teachers or partners. In the rare case of a cancellation on the part of RETREATS (due to political unrest, dangerous weather, or low sign-ups)  we will offer a transfer to another trip or a full refund of your funds. We require all participants to purchase travel insurance and highly encourage them to purchase “cancel for any reason” to protect them against the rare chance of cancellation. </p>
           <p> All prices are per/person and include a non-refundable deposit of $250 for domestic trips and $500+ for international trips.  Final payments for deposits are due 60 days prior to departure.</p>
-      </div>
-
-
-<!-- Footer -->
-    <footer>
-      <div class="grid">
-        <nav class="col-2 nav-list">
-          <h4> Company </h4>
-          <a href="about-us.html"> About Us </a>
-          <a href="careers.html"> Careers </a>
-          <a href="press.html"> Press </a>
-        </nav>
-
-        <nav class="col-2 nav-list">
-          <h4> Support </h4>
-          <a href="contact.html"> Contact </a>
-          <a href="faq.html"> FAQ </a>
-          <a href="help.html"> Help </a>
-        </nav>
-
-        <nav class="col-2 nav-list">
-          <h4> Partners </h4>
-          <a href="workwithus.html"> Work with us </a>
-        </nav>
-
-        <nav class="col-6 nav-list contact-us padded-left">
-          <h4> Contact Us </h4>
-          <a href="..."> <i class="fa fa-map-marker"></i>
-            1 Martin Place Sydney NSW 2000 Australia
-          </a>
-          <a href="..."> <i class="fa fa-envelope-o"></i>
-            help@retreatit.com
-          </a>
-          <a href="..."> <i class="fa fa-phone"></i>
-            +61 02 9982 8921
-          </a>
-        </nav>
-
-        <nav class="col-12 right footer-social">
-          <a href="http//twitter.com">
-            <i class="fa fa-twitter-square"></i>
-          </a>
-          <a href="http//facebook.com">
-              <i class="fa fa-facebook-official"></i>
-          </a>
-          <a href="http//instagram.com">
-            <i class="fa fa-instagram"></i>
-           </a>
-          <a href="http//pinterest.com">
-            <i class="fa fa-pinterest-square"></i>
-          </a>
-        </nav>
-
-        <nav class="col-12 right">
-          <a href="termsofuse.html" class=legal> Terms of use </a>
-          <a href="privacypolicy.html" class=legal> Privacy Policy </a>
-          <a href="accessability.html" class=legal> Accessability </a>
-        </nav>
-
-      </div>
-
-    </footer>
-
-
-  </body>
+      </section>
