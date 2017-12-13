@@ -1,0 +1,8 @@
+collections:
+- retreats
+
+
+collections:
+  retreats:
+    output: true
+    

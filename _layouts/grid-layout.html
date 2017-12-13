@@ -1,0 +1,41 @@
+---
+layout: default
+title: Retreats - Destinations
+---
+
+<div class="banner">
+  <div class=darkoverlay>
+
+    {% include header.html %}
+
+<!-- Home Page Banner -->
+    <section class="grid-middle ">
+      <div class="col">
+        <h1> {{page.title}} </h1>
+      </div>
+    </section>
+
+  </div><!-- close overlay -->
+</div> <!-- close banner -->
+
+<!-- main content starts here -->
+
+<section>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</section>
+
+<section class="dest-results">
+  <div class="grid-center">
+    {% assign related = site.retreats | where: "category",page.category %}
+    <!-- This is the defining what we want the category to retrieve from the retreats folder -->
+      {% for retreat in related %}
+    <a class="col-5" href="{{retreat.url}}">
+      <div class="bg-image" style="background-image:url('{{retreat.background-image}}')"></div>
+      <h2>{{retreat.title}}</h2>
+      <p> {{retreat.grid-summary}}</p>
+    </a>
+    {% endfor %}
+
+
+</section>
