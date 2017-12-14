@@ -29,18 +29,94 @@
     <a href="/index.html"> Retreats </a>
   </nav>
 
-  <nav class="col-6">
+  <nav class="col-6 mob-hide">
     <a href="/about.html"> About </a>
-    <a href="/destinations.html"> Destinations </a>
-      <a href="/types.html"> Types </a>
+
+
+    <span class="dropdown">
+      <span class="not-a-link">Destinations </span>
+        <div class="dropdown-content">
+          <ul>
+            <li> <a href="/bali.html"> Bali </a></li>
+            <li> <a href="/australia.html"> Australia </a></li>
+            <li> <a href="new-zealand.html"> New Zealand </a></li>
+            <li> <a href="japan"> Japan </a></li>
+          </ul>
+        </div>
+    </span>
+
+    <span class="dropdown">
+       <span class="not-a-link">Types </span>
+        <div class="dropdown-content">
+          <ul>
+            <li> <a href="/yoga.html"> Yoga </a></li>
+            <li> <a href="/adventure.html"> Adventure </a></li>
+            <li> <a href="/rehab.html"> Rehabilitation </a></li>
+            <li> <a href="/weightloss.html"> Weightloss </a></li>
+          </ul>
+        </div>
+    </span>
+
     <a href="/offers.html"> Offers </a>
     <a href="/blog.html"> Blog </a>
   </nav>
 
-  <nav class="col-3">
+  <nav class="col-3 right mob-hide">
     <a href="/sign-up.html"> Sign Up </a>
     <a href="/log-in.html"> Log In </a>
   </nav>
+
+  <nav class="mob-show">
+        <div class="burger-button">
+            <span class="burger-top"></span>
+            <span class="burger-middle"></span>
+            <span class="burger-bottom"></span>
+        </div>
+         <div class="burger-menu">
+          <ul>
+            <li>
+              <div class="dropdown-nav">
+                <span>Destinations</span>
+                <div class="dropdown-content-mob">
+                  <ul>
+                    <li>
+                      <a href=""> Bali </a>
+                    </li>
+                    <li>
+                      <a href=""> New Zealand </a>
+                    </li>
+                    <li>
+                      <a href=""> Australia </a>
+                    </li>
+                    <li>
+                      <a href=""> Japan </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+              <div class="dropdown-nav">
+                <span> Types </span>
+                <div class="dropdown-content-mob">
+                  <ul>
+                    <li>
+                      <a href=""> Yoga </a>
+                    </li>
+                    <li>
+                      <a href=""> Adventure </a>
+                    </li>
+                    <li>
+                      <a href=""> Rehabilitation </a>
+                    </li>
+                    <li>
+                      <a href=""> Weightloss </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+        </div>
+      </nav>
 
 </header>
 
@@ -134,4 +210,9 @@
 </footer>
 
 
+<!-- This is where to put all the Java Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="/main.js"></script>
+
   </body>
+</html>

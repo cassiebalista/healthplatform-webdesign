@@ -1,0 +1,36 @@
+---
+layout: default
+header-class: solo-header
+---
+
+{% include header.html %}
+
+<section class="grid-middle vh-50 bg-bali" style="background-image:url('{{page.background-image}}')">
+  <h1> Find Your Retreat </h1>
+</section>
+
+<!-- Search Bar -->
+    <section class="search-page-section">
+     <form class="full-search-bar">
+       <input type="text" name="Destination" placeholder="Destination">
+       <input type="text" name="Type" placeholder="Type">
+       <input type="text" name="When" placeholder="When">
+       <input type="text" name="Duration" placeholder="Duration">
+       <input type="text" name="Price" placeholder="Price">
+       <input type="Submit" value="Search">
+     </form>
+    </section>
+<!-- this page shows all the retreats and allows you to filter them -->
+
+<section class="search-results">
+  <div class="grid-center">
+
+  {% for retreat in site.retreats %}
+    <a class="col-5" href="{{retreat.url}}">
+      <div class="bg-image" style="background-image:url('{{retreat.background-image}}')"></div>
+      <h2>{{retreat.title}}</h2>
+      <p> {{retreat.grid-summary}}</p>
+    </a>
+    {% endfor %}
+
+</section>
