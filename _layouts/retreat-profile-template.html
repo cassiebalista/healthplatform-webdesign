@@ -10,46 +10,51 @@ header-class: solo-header
 <!-- - - - - - - - - - - Sub Header - - - - - - - - - - - - ---->
 
         <section class="sub-header">
-          <nav class="grid-spaceAround">
-            <a class="col" href="#summary"> Summary </a>
-            <a class="col" href="#itinerary"> Itinerary </a>
-            <a class="col" href="#inclusions"> Inclusions </a>
-            <a class="col" href="#pricing"> Pricing </a>
-            <a class="col" href="#location"> Location </a>
-            <a class="col" href="#professionals"> Professionals </a>
-            <a class="col" href="#exclusions"> Exclusions </a>
+          <nav>
+            <a href="#summary"> Summary </a>
+            <a href="#itinerary"> Itinerary </a>
+            <a href="#inclusions"> Inclusions </a>
+            <a href="#pricing"> Pricing </a>
+            <a href="#location"> Location </a>
+            <a href="#professionals"> Professionals </a>
+            <a href="#exclusions"> Exclusions </a>
             <a href="#faq"> FAQ </a>
           </nav>
         </section>
 
-
 <!-- - - - - - - - -  Profile Banner Photo - - - - - - - - - - - - -->
-      <section class="grid-middle bg-bali" style="background-image:url('{{page.background-image}}')">
 
-          <a href="#" class="button"> View Photos </a>
+      <section class="grid-middle bg medium" style="background-image:url('{{page.background-image}}')">
 
-          <a href="#" class="button"> Save </a>
+          <a href="#" class="photo-button padded-1"> View Photos </a>
 
-          <a href="#" class="button"> Share </a>
+          <a href="#" class="save-icon"> <i class="fa fa-heart-o" aria-hidden="true"></i> </a>
+
+          <a href="#" class="share-icon"> <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
 
       </section>
 
 <!-- - - - - - - - - - - - - - - Body/Conent  - - - - - - - - - - - - - - - -->
-
+<div class="profile-container">
 
     <!-- Summary -->
-    <section id="summary" class="profile-summary">
+    <section id="summary" class="profile-summary padded-profile center">
 
-      <h1 class="retreat-name-logo"> {{page.title}} </h1>
+      <img src='{{page.retreat-logo_image}}' class="retreat-name-logo">
 
        <p>{{page.summary}}</p>
 
-      <a href="#" class="button"> BOOK NOW </a>
+       <h3> <span> Price </span></h3>
+       <hr class="bump-up-small">
+        <p class="price-summary"> Starting from: {{page.price-summary}} </p>
+      <div class=padded-3>
+        <a href="#" class="book-now-button"> BOOK NOW </a>
+      </div>
 
     </section>
 
     <!-- Itinerary-->
-    <section id="itinerary" class="itin-profile">
+    <section id="itinerary" class="itin-profile padded-profile">
 
         <h2> <span>Itinerary</span></h2>
         <hr class="bump-up">
@@ -59,30 +64,30 @@ header-class: solo-header
     </section>
 
   <!-- Inclusions-->
-    <section id="inclusions" class="inclu-profile">
+    <section id="inclusions" class="inclu-profile padded-profile">
 
       <h2> <span>Inclusions</span></h2>
       <hr class="bump-up">
 
         <ul class="inclusions-list">
           {% for inclusion-item in page.inclusion-list %}
-          <li> {{inclusion-item.li}} </li>
+          <li>{{inclusion-item.li}} </li>
           {% endfor %}
         </ul>
 
     </section>
 
   <!-- Pricing -->
-    <section id="pricing">
+    <section id="pricing" class="padded-profile pricing">
 
       <h2> <span>Pricing</span></h2>
       <hr class="bump-up">
 
-      <div class="grid-middle pricing-profile">
+      <div class="grid">
       {% for item in page.pricing %}
-        <div class="col">
+        <div class="col-3_sm-6_xs-12 padded-1">
           <h3>{{item.name}}</h3>
-          <p>{{item.description}}</p>
+          <p class="tall">{{item.description}}</p>
           <p>${{item.price}}</p>
         </div>
       {% endfor %}
@@ -91,15 +96,15 @@ header-class: solo-header
 
   <!-- Location -->
 
-    <section id="location" class="location-profile">
-      <div class="grid-middle">
+    <section id="location" class="location-profile padded-profile">
+
         <h2> <span>Location</span></h2>
         <hr class="bump-up">
-      </div>
-      <div>{{page.map}}</div>
+
+      <div id="map">{{page.map}}</div>
 
       <div>
-        <ul class="location-discription">
+        <ul class="location-description">
           {% for location-item in page.location-list %}
           <li> {{location-item.li}} </li>
           {% endfor %}
@@ -108,28 +113,23 @@ header-class: solo-header
     </section>
 
   <!-- Professionals Section -->
-    <section id="professionals" class="profession-profile">
-        <h2> <span>Professionals</span></h2>
+    <section id="professionals" class="profession-profile padded-profile">
+      <h2> <span>Professionals</span></h2>
         <hr class="bump-up">
 
-        <div class="grid-middle">
-          <div class="col-4"> Background </div>
-            <p> {{page.background}} </p>
-            <div class="col-4">
-              <h4> Name </h4>
-              <p> {{page.name-first}} {{page.name-last}} </p>
-              <h4> Specialisation </h4>
-              <p> {{page.special}} </p>
-              <h4> Learn More </p>
-                <a href="{{page.back-url}}"> Learn more about {{page.name-first}} </a>
+        <div class="grid">
+          <div class="col-4 bg medium" style="background-image:url('{{page.back_image}}')"> </div>
+            <div class="col-8-middle">
+              <h4> {{page.first-name}} {{page.last-name}} <span class="qauli"> {{page.qualification}} </span> </h4>
+              <p> {{page.background}}</p>
+                <a href="{{page.back-url}}"> Learn more </a> </p>
               </div>
-              <div class="col-4" style="background-image:url('{{back_image}}')"></div>
         </div>
       </section>
 
 
   <!-- Exclusions -->
-      <section id="exclusions" class="exclu-profile">
+      <section id="exclusions" class="exclu-profile padded-profile">
         <h2> <span>Exclusions</span></h2>
         <hr class="bump-up">
 
@@ -137,7 +137,7 @@ header-class: solo-header
      </section>
 
   <!-- FAQ -->
-      <Section id="faq" class="faq-profile">
+      <Section id="faq" class="faq-profile padded-profile">
         <h2> <span>FAQs</span></h2>
         <hr class="bump-up">
 
@@ -146,10 +146,12 @@ header-class: solo-header
 
   <!-- Payment info -->
 
-      <section class="payment-info">
-        <h2> Payment info </h2>
+      <section class="payment-info padded-profile">
+        <h2 class=padded-bottom-2> Payment info </h2>
           <p>  By reserving your space through placing your deposit with us, you are agreeing to the stated policies in our Agreement.</p>
           <p> Please note: If cancellation takes place more than 60 days prior to your departure date any payments made will be refunded minus your deposit. If cancellation takes place between 30-60 days prior to your departure, 50% of the trip price will be forfeited. If cancellation takes place less than 30 days prior to your departure date, 100% of the trip price will be forfeited.</p>
           <p> RETREATS reserves the right to make any changes deemed necessary by our team, trip leaders, teachers or partners. In the rare case of a cancellation on the part of RETREATS (due to political unrest, dangerous weather, or low sign-ups)  we will offer a transfer to another trip or a full refund of your funds. We require all participants to purchase travel insurance and highly encourage them to purchase “cancel for any reason” to protect them against the rare chance of cancellation. </p>
           <p> All prices are per/person and include a non-refundable deposit of $250 for domestic trips and $500+ for international trips.  Final payments for deposits are due 60 days prior to departure.</p>
       </section>
+
+  </div><!-- end profile container -->

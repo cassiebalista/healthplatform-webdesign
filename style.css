@@ -4,7 +4,7 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
-  border: 1px solid rgb(220,220,220);
+  /*border: 1px solid rgb(220,220,220);*/
 }
 
 
@@ -27,13 +27,19 @@ footer {
   padding: 5%;
 }
 
+section {
+  position: relative;
+}
+
 /* ----------- Typography ------------*/
 
 
 h1,h2, h3 {
   text-align: center;
-
+  margin-bottom:0.5em;
 }
+
+
 
 a {
     color: inherit;
@@ -51,12 +57,30 @@ h2 span {
   background-color: white;
 }
 
-hr.bump-up {
-    width: 50%;
+h3 span {
+    font-size: 15px;
+    background-color: white;
+    padding: 10px;
+    font-weight: normal;
+
+}
+
+hr[class*=bump-up] {
+    width: 65%;
     margin: auto;
-    margin-top: -30px;
+    margin-top: -22px;
     margin-bottom: 3rem;
 }
+
+hr.bump-up-small {
+  margin-bottom: 2rem;
+  width:33%;
+}
+
+li {
+  list-style-image: url(/images/chevron.svg);
+}
+
 /*---------modular---------------*/
 
 .right {text-align: right;}
@@ -73,12 +97,24 @@ hr.bump-up {
   padding: 1%;
 }
 
+.padded-2 {
+  padding: 2%;
+}
+
 .padded-3 {
   padding: 3%;
 }
 
 .padded-5 {
   padding: 5%;
+}
+
+.padded-bottom-2{
+  padding-bottom: 2%;
+}
+
+.padded-profile{
+  padding: 10vh 15%;
 }
 
 .button{
@@ -93,7 +129,7 @@ hr.bump-up {
 
 header{
   width:100%;
-  padding: 3%;
+  padding: 1% 5%;
   background-color: white;
 }
 
@@ -107,11 +143,15 @@ header a{
 }
 
 .sub-header {
-  padding: 1%;
+  padding: 1% 5%;
   background-color:rgb(60, 60, 65);
   color: white;
   text-align:center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.sub-header a {
+  padding: 0 1%;
 }
 
 .banner {
@@ -121,7 +161,7 @@ header a{
 }
 
 .banner section{
-  min-height: 100vh
+  min-height: 90vh
 }
 
 .darkoverlay{
@@ -132,6 +172,7 @@ h1{
   font-size:70px;
   color:white;
 }
+
 
 h2{
   font-weight: normal;
@@ -146,7 +187,6 @@ h2{
 .light-text h1 {
   padding-bottom: 3%;
 }
-
 
 
 
@@ -327,7 +367,7 @@ h2{
 
 
 [class*='bg'] {
-  padding: 25% 0;
+  padding: 20% 0;
   background-color: rgb(200,200,205);
   background-size: cover;
   background-position: center;
@@ -336,6 +376,11 @@ h2{
 [class*='bg'].tall {
     padding: 50% 0;
 }
+
+[class*='bg'].medium {
+    padding: 15% 0;
+}
+
 
 .bg-bali{
   background-image: url('images/Bali-Spa-Retreats1.jpg');
@@ -377,8 +422,9 @@ h2{
 
 /* Home Page */
 
-.destinations .explore-types h2{
-  padding:7%;
+.destinations-header,
+.popular-header {
+  padding:5%;
   text-align:center;
   color:rgb(60,60,65);
   font-size: 30px;
@@ -433,9 +479,10 @@ h2{
   background: white;
   color:rgb(60,60,65);
   position:absolute;
-  bottom:-25px;
+  bottom:45px;
   left:10vw;
-  border-radius: 3px;
+  border-radius: 5px;
+  padding: 4px;
 }
 
 .search-section h3{
@@ -455,14 +502,116 @@ h2{
 
 /* ------- Profile Page -------- */
 
-.inclusions-list {
-  column-count: 2;
-  list-style-position: inside;
+.profile-container p {
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
+.profile-container section:nth-child(even) {
+    background-color: rgb(250,250,250);
+}
 
+.profile-container section:nth-child(even) h2 span {
+    background-color: rgb(250,250,250);
+}
 
+p.tall {
+  min-height: 9rem;
+}
+img.retreat-name-logo {
+  display: block;
+  margin: auto;
+  width: 25%;
+  padding-bottom: 3%;
+  padding-top: 1%;
+  }
 
+  .inclusions-list, .location-description{
+    column-count: 2;
+    list-style-position: inside;
+    padding: 2%;
+  }
+
+  #map iframe {
+    height:450px;
+    width:100%;
+    margin-bottom:1rem;
+  }
+
+  .share-icon, .save-icon {
+    color: #fafafa;
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .share-icon{
+    position:absolute;
+    top: -12px;
+    right: 11px;
+  }
+
+  .save-icon{
+    position:absolute;
+    top:-12px;
+    right:43px;
+  }
+
+  .photo-button{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    border:none;
+    color: rgb(60,60,65);
+    font-size: 12px;
+  }
+
+  .price-summary {
+    text-transform:uppercase;
+
+  }
+
+  .book-now-button{
+    text-transform: uppercase;
+    background-color: rgb(60,60,65);
+    color: white;
+    border-radius: 5px;
+    padding: 2%;
+    letter-spacing: 2px;
+  }
+
+  .payment-info {
+    background-color:#3c3c3cc7;
+    color: white;
+    font-size:13px
+  }
+
+  .payment-info h2 {
+    font-size: 18px;
+  }
+
+  .profession-profile h4 {
+    font-size:23px;
+  }
+
+  .profession-profile p, a {
+    text-align:left;
+    padding-top:2%;
+  }
+
+  .profession-profile p, a, h4 {
+    padding-left: 4%;
+  }
+
+  .profession-profile a{
+    font-weight:bold;
+  }
+
+  .qauli {
+    font-size: 16px;
+    font-weight:normal;
+    padding-left:3%
+  }
 
 
 /* Media Queries */
@@ -471,7 +620,19 @@ h2{
   display: none;
 }
 
-@media (max-width:576px) {
+@media (max-width:768px) /* gridlex s */{
+
+  #map iframe {
+    height:350px;
+  }
+  .padded-profile{
+    padding: 10vh 10%;
+  }
+
+}
+
+
+@media (max-width:576px) /* gridlex xs */{
 .mob-hide {
   display: none;
 }
@@ -480,4 +641,15 @@ h2{
   display:block;
 }
 
-}
+p.tall {
+    min-height:0;
+  }
+  #map iframe {
+    height:250px;
+  }
+  .padded-profile{
+    padding: 5vh 5%;
+  }
+
+
+}/* end media query */
