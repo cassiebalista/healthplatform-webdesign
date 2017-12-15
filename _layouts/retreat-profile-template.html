@@ -21,7 +21,7 @@ title: Retreats - Profile
 
 <!-- - - - - - - - -  Profile Banner Photo - - - - - - - - - - - - -->
 
-      <section class="grid-middle bg medium" style="background-image:url('{{page.background-image}}')">
+      <section class="grid-middle bg medium" style="background-image:url('{{page.background_image}}')">
 
           <a href="#" class="photo-button padded-1"> View Photos </a>
 
@@ -29,7 +29,7 @@ title: Retreats - Profile
 
           <div class="popup-gallery">
 
-	           <a href="{{page.background-image}}" title="{{page.title}}" class="photo-button padded-1"> VIEW PHOTOS </a>
+	           <a href="{{page.background_image}}" title="{{page.title}}" class="photo-button padded-1"> VIEW PHOTOS </a>
              {% for item in page.gallery %}
 	               <a href="{{item.image_path}}" title="{{page.title}}"></a>
               {% endfor %}
