@@ -1,11 +1,12 @@
 ---
 layout: default
 header-class: solo-header
+
 ---
 
 {% include header.html %}
 
-<section class="grid-middle vh-50 bg-bali" style="background-image:url('{{page.background-image}}')">
+<section class="grid-middle bg-search-banner vh-50">
   <h1> Find Your Retreat </h1>
 </section>
 
@@ -26,7 +27,7 @@ header-class: solo-header
   <div class="grid-center">
 
   {% for retreat in site.retreats %}
-    <a class="col-5" href="{{retreat.url}}">
+    <a class="col-5 padded-1" href="{{retreat.url}}">
       <div class="bg-image" style="background-image:url('{{retreat.background-image}}')"></div>
       <h2>{{retreat.title}}</h2>
       <p> {{retreat.grid-summary}}</p>
