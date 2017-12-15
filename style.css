@@ -25,7 +25,7 @@ body {
 
 footer {
   padding: 5% 5% 2%;
-  background-color:#676767;
+  background-color:rgb(60, 60, 65);
   color:white;
 }
 
@@ -550,13 +550,15 @@ h2{
   border: none;
   border-radius: 3px;
   text-align: left;
+  font-size: 12px;
+  letter-spacing: 1px
 }
 
 .search-section{
   width: 68vw;
   color: rgb(60,60,65);
   position: absolute;
-  bottom: 43px;
+  bottom: 60px;
   left: 16vw;
   border-radius: 3px;
   padding: 7px;
@@ -609,13 +611,13 @@ img.retreat-name-logo {
 
   .share-icon{
     position:absolute;
-    top: -12px;
+    top: -2px;
     right: 11px;
   }
 
   .save-icon{
     position:absolute;
-    top:-12px;
+    top:-2px;
     right:43px;
   }
 
