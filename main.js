@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
-
+// hamburger menu
 $(".burger-button").click(function(){
  $(".burger-button").toggleClass("active");
  $(".burger-menu").slideToggle();
 });
 
+// drop down in hamburger menu
 $(".dropdown-nav").click(function(){
     $(".dropdown-nav").children(".dropdown-content-mob").slideUp();
     $(this).children(".dropdown-content-mob").slideDown("200");
