@@ -65,7 +65,7 @@ title: Retreats - Profile
     </section>
 
     <!-- Itinerary-->
-    <section id="itinerary" class="itin-profile padded-profile">
+    <section id="itinerary" class="itin-profile padded-profile center">
 
         <h2> <span>Itinerary</span></h2>
         <hr class="bump-up">
@@ -98,6 +98,7 @@ title: Retreats - Profile
       {% for item in page.pricing %}
         <div class="col-3_sm-6_xs-12 padded-1">
           <h3>{{item.name}}</h3>
+          <div class="bg-image" style="background-image:url('{{item.accomodation_image}}')"></div>
           <p class="tall">{{item.description}}</p>
           <p>${{item.price}}</p>
         </div>
@@ -124,7 +125,7 @@ title: Retreats - Profile
     </section>
 
   <!-- Professionals Section -->
-    <section id="professionals" class="profession-profile padded-profile">
+    <section id="professionals" class="profession-profile padded-profile center">
       <h2> <span>Professionals</span></h2>
         <hr class="bump-up">
 
@@ -140,7 +141,7 @@ title: Retreats - Profile
 
 
   <!-- Exclusions -->
-      <section id="exclusions" class="exclu-profile padded-profile">
+      <section id="exclusions" class="exclu-profile padded-profile center">
         <h2> <span>Exclusions</span></h2>
         <hr class="bump-up">
 
@@ -148,7 +149,7 @@ title: Retreats - Profile
      </section>
 
   <!-- FAQ -->
-      <Section id="faq" class="faq-profile padded-profile">
+      <Section id="faq" class="faq-profile padded-profile center">
         <h2> <span>FAQs</span></h2>
         <hr class="bump-up">
 
@@ -157,7 +158,7 @@ title: Retreats - Profile
 
   <!-- Payment info -->
 
-      <section class="payment-info padded-profile">
+      <section class="payment-info padded-profile center">
         <h2 class=padded-bottom-2> Payment info </h2>
           <p>  By reserving your space through placing your deposit with us, you are agreeing to the stated policies in our Agreement.</p>
           <p> Please note: If cancellation takes place more than 60 days prior to your departure date any payments made will be refunded minus your deposit. If cancellation takes place between 30-60 days prior to your departure, 50% of the trip price will be forfeited. If cancellation takes place less than 30 days prior to your departure date, 100% of the trip price will be forfeited.</p>
