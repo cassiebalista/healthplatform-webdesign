@@ -11,17 +11,26 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
 
+      <!-- this is for the popup gallery of images -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+
+
       <link href="/style.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body id="top">
+    <!-- this is the back to top botton that scrolls with every page -->
+      <a href="#top" class="back-to-top">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </a>
+    </div>
 
     <!-- to add the header on each page, use the include header.html -->
 
     
 
-<header class="grid-middle ">
+<header class="grid-middle">
   <nav class="col-3 company-name">
     <a href="/index.html"> Retreats </a>
   </nav>
@@ -46,10 +55,10 @@
        <span class="not-a-link">Types </span>
         <div class="dropdown-content">
           <ul>
-            <li> <a href="/yoga.html"> Yoga </a></li>
-            <li> <a href="/adventure.html"> Adventure </a></li>
-            <li> <a href="/rehab.html"> Rehabilitation </a></li>
-            <li> <a href="/weightloss.html"> Weightloss </a></li>
+            <li> <a href="/type/yoga.html"> Yoga </a></li>
+            <li> <a href="/type/adventure.html"> Adventure </a></li>
+            <li> <a href="/type/rehab.html"> Rehabilitation </a></li>
+            <li> <a href="/type /weightloss.html"> Weightloss </a></li>
           </ul>
         </div>
     </span>
@@ -117,7 +126,8 @@
 
 </header>
 
-<!-- <div class="banner bg medium">
+
+    <!-- <div class="banner bg medium">
   <div class=darkoverlay> -->
 
 <!-- Home Page Banner -->
@@ -130,24 +140,24 @@
 
 <!-- main content starts here -->
 
-<section class="padded-5">
-  <p> ``
-</p>
+<section class="padded-5 md-paragraph">
+  ``
+
 
 </section>
 
-<section class="dest-results">
+<section class="dest-results padded-5">
   <div class="grid-center">
     
     <!-- This is the defining what we want the category to retrieve from the retreats folder -->
       
-    <a class="col-5 padded-1" href="/retreats/five-elements.html">
+    <a class="col-6 padded-1" href="/retreats/five-elements.html">
       <div class="bg-image" style="background-image:url('/images/five-elements-pool.jpg')"></div>
       <h2>Five Elements, Bali</h2>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </a>
     
-    <a class="col-5 padded-1" href="/retreats/ubud-yoga-profile.html">
+    <a class="col-6 padded-1" href="/retreats/ubud-yoga-profile.html">
       <div class="bg-image" style="background-image:url('/images/como-bali-1.jpg')"></div>
       <h2>Como Shambhala Estate, Bali</h2>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -220,8 +230,13 @@
 </footer>
 
 
+
+
+
 <!-- This is where to put all the Java Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script src="/main.js"></script>
 

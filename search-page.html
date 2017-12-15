@@ -1,10 +1,7 @@
 ---
 layout: default
-header-class: solo-header
-
 ---
 
-{% include header.html %}
 
 <section class="grid-middle bg-search-banner vh-50">
   <h1> Find Your Retreat </h1>
@@ -13,12 +10,16 @@ header-class: solo-header
 <!-- Search Bar -->
     <section class="search-page-section">
      <form class="full-search-bar">
+       <div>
        <input type="text" name="Destination" placeholder="Destination">
        <input type="text" name="Type" placeholder="Type">
        <input type="text" name="When" placeholder="When">
+     </div>
+     <div>
        <input type="text" name="Duration" placeholder="Duration">
        <input type="text" name="Price" placeholder="Price">
        <input type="Submit" value="Search">
+     </div>
      </form>
     </section>
 <!-- this page shows all the retreats and allows you to filter them -->

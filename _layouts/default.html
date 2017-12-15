@@ -11,20 +11,36 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
 
+      <!-- this is for the popup gallery of images -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+
+
       <link href="/style.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body id="top">
+    <!-- this is the back to top botton that scrolls with every page -->
+      <a href="#top" class="back-to-top">
+          <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </a>
+    </div>
 
     <!-- to add the header on each page, use the include header.html -->
+
+    {% include header.html %}
 
     {{content}}
 
     {% include footer.html %}
 
+
+
+
 <!-- This is where to put all the Java Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script src="/main.js"></script>
 

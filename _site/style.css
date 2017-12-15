@@ -24,7 +24,9 @@ body {
 }
 
 footer {
-  padding: 5%;
+  padding: 5% 5% 2%;
+  background-color:#676767;
+  color:white;
 }
 
 section {
@@ -34,9 +36,17 @@ section {
 /* ----------- Typography ------------*/
 
 
-h1,h2, h3 {
+h2, h3, h4 {
   text-align: center;
   margin-bottom:0.5em;
+  letter-spacing: 1px;
+}
+h4 {
+  text-align: inherit;
+}
+
+h1 {
+  text-align: center;
   letter-spacing: 1px;
 }
 
@@ -84,12 +94,19 @@ hr.bump-up-small {
   padding: 1.5%;
 }
 
+.md-paragraph p {
+  margin-bottom: 1rem;
+}
+
 /*---------modular---------------*/
 
 .right {text-align: right;}
 
 .center {
   text-align:center;
+}
+.left {
+  text-align: left;
 }
 
 .padded-left{
@@ -203,21 +220,6 @@ h2{
   padding-bottom: 3%;
 }
 
-
-
-  /* Solo header */
-
-  .solo-header {
-    position:static;
-    width:100%;
-    padding:2%;
-  }
-
-  .solo-header a {
-    color: rgb(60,60,60);
-  }
-
-
 /*   drop down menu */
 
   .dropdown {
@@ -240,6 +242,7 @@ h2{
     min-width: 150px;
     padding: 2%;
     color: rgb(60,60,65);
+    z-index: 9;
     /*list-style-image: */
   }
 
@@ -378,6 +381,17 @@ h2{
     display: inline-block;
   }
 
+/* back to top button */
+
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 40px;
+  z-index: 5;
+  color: rgb(120,120,120);
+}
+
 /* ---------------------- Background Images ------------------------------- */
 
 
@@ -487,9 +501,9 @@ h2{
 
 .full-search-bar {
   width: 100%;
-  background: rgb(60,60,65);
+  background: rgba(60, 60, 65, 0.81);
   color:white;
-  padding:5%;
+  padding:3%;
 }
 
 
@@ -504,10 +518,33 @@ h2{
   text-align: center;
 }
 
+.full-search-bar [type="submit"]{
+  background-color: teal;
+  font-size: 14px;
+  padding: 9px 27px;
+  width: 122px;
+  margin: 1%;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  border: none;
+}
+
+.full-search-bar input {
+  padding: 9px;
+  width: 24%;
+  margin: 0.8rem;
+  background-color: rgb(250,250,250);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  text-align: left;
+}
+
 .search-bar input {
   padding: 13px;
-  width: 35%;
-  margin: 1%;
+  width: 70%;
+  margin: 2%;
   background-color: rgb(250,250,250);
   color: white;
   border: none;
@@ -519,7 +556,7 @@ h2{
   width: 68vw;
   color: rgb(60,60,65);
   position: absolute;
-  bottom: 70px;
+  bottom: 43px;
   left: 16vw;
   border-radius: 3px;
   padding: 7px;
@@ -527,14 +564,10 @@ h2{
 }
 
 
-
-
-
 /* ------- Profile Page -------- */
 
 .profile-container p {
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 .profile-container section:nth-child(even) {
@@ -556,17 +589,17 @@ img.retreat-name-logo {
   padding-top: 1%;
   }
 
-  .inclusions-list, .location-description{
-    column-count: 2;
-    list-style-position: inside;
-    padding: 2%;
-  }
+.inclusions-list, .location-description{
+  column-count: 2;
+  list-style-position: inside;
+  padding: 2%;
+}
 
-  #map iframe {
-    height:450px;
-    width:100%;
-    margin-bottom:1rem;
-  }
+#map iframe {
+  height:450px;
+  width:100%;
+  margin-bottom:1rem;
+}
 
   .share-icon, .save-icon {
     color: #fafafa;
@@ -611,8 +644,6 @@ img.retreat-name-logo {
   }
 
   .payment-info {
-    background-color:#3c3c3cc7;
-    color: white;
     font-size:13px
   }
 
@@ -624,14 +655,6 @@ img.retreat-name-logo {
     font-size:23px;
   }
 
-  .profession-profile p, a {
-    text-align:left;
-    padding-top:2%;
-  }
-
-  .profession-profile p, a, h4 {
-    padding-left: 4%;
-  }
 
   .profession-profile a{
     font-weight:bold;
@@ -640,13 +663,23 @@ img.retreat-name-logo {
   .qauli {
     font-size: 16px;
     font-weight:normal;
-    padding-left:3%
+    padding-left:3%;
+    border-left: 1px solid grey;
   }
 
 
 /* search page */
 
+/* popup photo gallery */
 
+  /* this removes the weird black outline on the previous and next buttons */
+.mfp-arrow-right:before {
+  border-left: none;
+}
+
+.mfp-arrow-left:before {
+  border-right: none;
+}
 
 
 /* Media Queries */

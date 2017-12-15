@@ -1,10 +1,7 @@
 ---
 layout: default
 title: Retreats - Profile
-header-class: solo-header
 ---
-
-{% include header.html %}
 
 
 <!-- - - - - - - - - - - Sub Header - - - - - - - - - - - - ---->
@@ -28,6 +25,20 @@ header-class: solo-header
 
           <a href="#" class="photo-button padded-1"> View Photos </a>
 
+          <!--- pop-up gallery -->
+
+          <div class="popup-gallery">
+
+	           <a href="{{page.background-image}}" title="{{page.title}}" class="photo-button padded-1"> VIEW PHOTOS </a>
+             {% for item in page.gallery %}
+	               <a href="{{item.image_path}}" title="{{page.title}}"></a>
+              {% endfor %}
+          </div>
+
+
+
+
+          <!-- popup gallery -->
           <a href="#" class="save-icon"> <i class="fa fa-heart-o" aria-hidden="true"></i> </a>
 
           <a href="#" class="share-icon"> <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
@@ -119,7 +130,7 @@ header-class: solo-header
 
         <div class="grid">
           <div class="col-4 bg medium" style="background-image:url('{{page.back_image}}')"> </div>
-            <div class="col-8-middle">
+            <div class="col-8-middle padded-5 left">
               <h4> {{page.first-name}} {{page.last-name}} <span class="qauli"> {{page.qualification}} </span> </h4>
               <p> {{page.background}}</p>
                 <a href="{{page.back-url}}"> Learn more </a> </p>
