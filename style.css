@@ -733,4 +733,11 @@ p.tall {
     width: 113vw;
     bottom: 60px;
     left: -6vw;
+  }
+
+  .contact-us{
+    padding-left:0%;
+    padding-top: 10%;
+  }
+
 }/* end media query */
