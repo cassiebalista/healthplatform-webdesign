@@ -100,12 +100,13 @@ title: Retreats - Profile
           <h3>{{item.name}}</h3>
           <div class="bg-image" style="background-image:url('{{item.accomodation_image}}')"></div>
           <p class="tall padded-5">{{item.description}}</p>
+          <p class="tab-show">${{item.price}}</p>
         </div>
         {% endfor %}
 
         {% for item in page.pricing %}
 
-        <div class="col-3_sm-6_xs-12 padded-1">
+        <div class="col-3_sm-6_xs-12 padded-1 tab-hide">
           <p>${{item.price}}</p>
         </div>
       {% endfor %}
@@ -136,8 +137,8 @@ title: Retreats - Profile
         <hr class="bump-up">
 
         <div class="grid">
-          <div class="col-4 bg medium" style="background-image:url('{{page.back_image}}')"> </div>
-            <div class="col-8-middle padded-5 left">
+          <div class="col-4_sm-8 bg medium mob-square" style="background-image:url('{{page.back_image}}')"> </div>
+            <div class="col-8-middle_sm-12 padded-5 left">
               <h4> {{page.first-name}} {{page.last-name}} <span class="qauli"> {{page.qualification}} </span> </h4>
               <p> {{page.background}}</p>
                 <a href="{{page.back-url}}"> Learn more </a> </p>

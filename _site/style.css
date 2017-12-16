@@ -763,6 +763,10 @@ img.retreat-name-logo {
   display: none;
 }
 
+.tab-show {
+  display: none;
+}
+
 @media (max-width:768px) /* gridlex s */{
 
   #map iframe {
@@ -770,6 +774,19 @@ img.retreat-name-logo {
   }
   .padded-profile{
     padding: 10vh 10%;
+  }
+
+  .tab-hide {
+    display: none;
+  }
+
+  .tab-show {
+    display: block;
+  }
+
+  .mob-square {
+    min-height: 60vw;
+    margin:auto;
   }
 
 }
