@@ -145,10 +145,14 @@ padding: 0% 5% 5%;
   padding: 10vh 15%;
 }
 
+.padded-banner-hp {
+  padding-bottom: 18%;
+}
+
 .explore-profile-padded {
   padding-left:5%;
   padding-right: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 9%;
   padding-top: 0%;
 }
 
@@ -546,27 +550,27 @@ h2{
 }
 
 .search-bar input {
-  padding: 13px;
-  width: 70%;
+  padding: 14px;
+  width: 60%;
   margin: 2%;
-  background-color: rgb(250,250,250);
+  background-color: rgba(250, 250, 250, 0.79);
   color: white;
   border: none;
   border-radius: 3px;
   text-align: left;
   font-size: 12px;
-  letter-spacing: 1px
+  letter-spacing: 1px;
 }
 
 .search-section{
   width: 68vw;
   color: rgb(60,60,65);
   position: absolute;
-  bottom: 60px;
+  bottom: 185px;
   left: 16vw;
   border-radius: 3px;
   padding: 7px;
-  text-align:center;
+  text-align: center;
 }
 
 
@@ -725,5 +729,8 @@ p.tall {
     padding: 5vh 5%;
   }
 
-
+  .search-section {
+    width: 113vw;
+    bottom: 60px;
+    left: -6vw;
 }/* end media query */
