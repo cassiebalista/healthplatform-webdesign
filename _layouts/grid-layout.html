@@ -21,7 +21,7 @@ title: Retreats - Destinations
 
 </section>
 
-<section class="dest-results padded-top-1">
+<section class="dest-results no-padded-top">
   <div class="grid-center">
     {% assign related = site.retreats | where: "category",page.category %}
     <!-- This is the defining what we want the category to retrieve from the retreats folder -->
@@ -29,7 +29,7 @@ title: Retreats - Destinations
     <a class="col-6 padded-1" href="{{retreat.url}}">
       <div class="bg-image" style="background-image:url('{{retreat.background_image}}')"></div>
       <h2>{{retreat.title}}</h2>
-      <p> {{retreat.grid-summary}}</p>
+      <p class="search-results"> {{retreat.grid-summary}}</p>
     </a>
     {% endfor %}
 

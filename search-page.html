@@ -3,23 +3,19 @@ layout: default
 ---
 
 
-<section class="grid-middle bg-search-banner vh-50">
+<section class="grid-middle bg-search-banner vh-60">
   <h1> Find Your Retreat </h1>
 </section>
 
 <!-- Search Bar -->
     <section class="search-page-section">
      <form class="full-search-bar">
-       <div>
-       <input type="text" name="Destination" placeholder="Destination">
+       <input class="wide-input" type="text" name="Destination" placeholder="Destination">
        <input type="text" name="Type" placeholder="Type">
        <input type="text" name="When" placeholder="When">
-     </div>
-     <div>
        <input type="text" name="Duration" placeholder="Duration">
        <input type="text" name="Price" placeholder="Price">
        <input type="Submit" value="Search">
-     </div>
      </form>
     </section>
 <!-- this page shows all the retreats and allows you to filter them -->
@@ -29,9 +25,9 @@ layout: default
 
   {% for retreat in site.retreats %}
     <a class="col-5 padded-1" href="{{retreat.url}}">
-      <div class="bg-image" style="background-image:url('{{retreat.background-image}}')"></div>
+      <div class="bg-image" style="background-image:url('{{retreat.background_image}}')"></div>
       <h2>{{retreat.title}}</h2>
-      <p> {{retreat.grid-summary}}</p>
+      <p class="search-results"> {{retreat.grid-summary}}</p>
     </a>
     {% endfor %}
 

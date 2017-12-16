@@ -2,16 +2,22 @@ $(document).ready(function(){
 
 // hamburger menu
 $(".burger-button").click(function(){
- $(".burger-button").toggleClass("active");
- $(".burger-menu").slideToggle();
-});
+    $(".burger-button").toggleClass("active");
+    $(".burger-menu").slideToggle();
+  });
+
+ $(".on-page").click(function(){
+   $(".burger-button").toggleClass("active");
+   $(".burger-menu").slideToggle();
+ });
 
 // drop down in hamburger menu
 $(".dropdown-nav").click(function(){
-    $(".dropdown-nav").children(".dropdown-content-mob").slideUp();
-    $(this).children(".dropdown-content-mob").slideDown("200");
+    $(".dropdown-nav").removeClass("active");
+    $(this).addClass("active");
+    $(".dropdown-nav").not(".active").children(".dropdown-content-mob").slideUp("200");
+    $(".dropdown-nav.active").children(".dropdown-content-mob").slideDown("200");
   });
-
   // This is your smooth scrolling
 
     // Select all links with hashes

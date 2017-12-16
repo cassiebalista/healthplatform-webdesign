@@ -99,7 +99,13 @@ title: Retreats - Profile
         <div class="col-3_sm-6_xs-12 padded-1">
           <h3>{{item.name}}</h3>
           <div class="bg-image" style="background-image:url('{{item.accomodation_image}}')"></div>
-          <p class="tall">{{item.description}}</p>
+          <p class="tall padded-5">{{item.description}}</p>
+        </div>
+        {% endfor %}
+
+        {% for item in page.pricing %}
+
+        <div class="col-3_sm-6_xs-12 padded-1">
           <p>${{item.price}}</p>
         </div>
       {% endfor %}
