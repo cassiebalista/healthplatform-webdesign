@@ -826,4 +826,8 @@ p.tall {
     padding-top: 10%;
   }
 
+  .full-search-bar .wide-input {
+    width: 93%;
+  }
+
 }/* end media query */
