@@ -18,6 +18,25 @@ $(".dropdown-nav").click(function(){
     $(".dropdown-nav").not(".active").children(".dropdown-content-mob").slideUp("200");
     $(".dropdown-nav.active").children(".dropdown-content-mob").slideDown("200");
   });
+
+// This is your log in Overlay
+
+$(".log-in-button").click(function(){
+  $(".log-in").toggleClass("flexcenter");
+});
+
+$('.flexslider').flexslider({
+  animation:"slide"
+  controlNav: "thumbnails"
+});
+
+$(".log-in").click(function(){
+  console.log('test')
+  $(this).toggleClass("flexcenter");
+}).children().click(function(e){
+  return false;
+});
+
   // This is your smooth scrolling
 
     // Select all links with hashes

@@ -63,7 +63,7 @@ a {
 }
 
 .light-text{
-  color: white
+  color: white;
 
 }
 
@@ -241,6 +241,34 @@ h2{
 
 .light-text h1 {
   padding-bottom: 3%;
+}
+
+/* Log In Overlay*/
+
+.log-in {
+  position: fixed;
+  background-color: rgba(60, 60, 65, 0.35);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 35%;
+}
+
+.log-in-form {
+  background-color: white;
+  margin: 15%;
+}
+
+.flexcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*   drop down menu */
